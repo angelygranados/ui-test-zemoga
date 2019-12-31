@@ -1,0 +1,38 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+
+.container {
+    margin: 0;
+    padding: 0; 
+    width: 100%;
+    font-family: 'Lato', sans-serif;
+}
+@media (max-width: 1200px){
+    .header{
+        height: 700px;
+    }
+}
+
+/* tabletas */
+@media (max-width: 1025px) {
+  .header { 
+        height: 610px;
+    }
+}
+
+/* escritorio normales */
+@media (max-width: 769px) {
+  
+}
+
+/* pantallas grandes */
+@media (max-width: 576px) {
+  
+}
+@media (max-width: 500px) {
+    
+}
+
+@media (max-width: 414px) {
+    
+}
+

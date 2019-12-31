@@ -1,0 +1,41 @@
+.header { 
+    height: 800px;
+}
+
+@media (max-width: 1200px){
+    .header{
+        height: 700px;
+    }
+}
+
+/* tabletas */
+@media (max-width: 1025px) {
+  .header { 
+        height: 610px;
+    }
+}
+
+/* escritorio normales */
+@media (max-width: 769px) {
+  .header { 
+        height: 460px;
+    }
+}
+
+/* pantallas grandes */
+@media (max-width: 576px) {
+  .header { 
+        height: 345px;
+    }
+}
+@media (max-width: 500px) {
+    .header { 
+          height: 300px;
+      }
+}
+
+@media (max-width: 414px) {
+    .header { 
+          height: 230px;
+      }
+}

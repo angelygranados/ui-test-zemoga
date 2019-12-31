@@ -1,0 +1,84 @@
+@import "./variables.scss";
+@mixin gradient($from, $to) {
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+    background: -o-linear-gradient(top, $from 0%,$to 100%);
+  }
+.menu { 
+    height: 100px;
+    padding: 20px 9%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+    @include gradient($grey, $transparent);
+}
+.menu__title{
+    width: 50%;
+    height: 50px;
+    font-size: 30px; 
+    letter-spacing: 1pt;
+    color: $white;
+}
+.menu__navbar{
+    width: 50%;
+    height: 50px;
+}
+.menu__navbar ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+}
+.menu__navbar--item{
+    list-style: none;
+}
+.item__link{
+    text-decoration: none;
+    color: $white;
+    font-weight: 300;
+    margin-top: 2px;
+}
+.item__search{
+    width: 28px;
+    height: 28px;
+}
+@media (max-width: 1200px){
+    .menu{
+        height: 700px;
+    }
+}
+
+/* tabletas */
+@media (max-width: 1025px) {
+  .menu { 
+        height: 610px;
+    }
+}
+
+/* escritorio normales */
+@media (max-width: 769px) {
+  .menu { 
+        height: 460px;
+    }
+}
+
+/* pantallas grandes */
+@media (max-width: 576px) {
+  .menu { 
+        height: 345px;
+    }
+}
+@media (max-width: 500px) {
+    .menu { 
+          height: 300px;
+      }
+}
+
+@media (max-width: 414px) {
+    .menu { 
+          height: 230px;
+      }
+}
