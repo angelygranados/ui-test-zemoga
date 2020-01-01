@@ -38,6 +38,7 @@
 .item__link{
     text-decoration: none;
     color: $white;
+    font-size: 16px;
     font-weight: 300;
     margin-top: 2px;
 }
@@ -47,38 +48,84 @@
 }
 @media (max-width: 1200px){
     .menu{
-        height: 700px;
+        height:90px;
+        padding: 15px 9%;
     }
 }
 
 /* tabletas */
 @media (max-width: 1025px) {
   .menu { 
-        height: 610px;
+        padding: 10px 9%;
     }
 }
 
 /* escritorio normales */
 @media (max-width: 769px) {
-  .menu { 
-        height: 460px;
+    .menu { 
+        padding: 10px 7%;
+    }
+    .menu__title{
+        width: 40%;
+        font-size: 25px; 
+    }
+    .menu__navbar{
+        width: 60%;
+    }
+    .item__link{
+        font-size: 15px;
+    }
+    .item__search{
+        width: 25px;
+        height: 25px;
     }
 }
 
 /* pantallas grandes */
 @media (max-width: 576px) {
-  .menu { 
-        height: 345px;
+    .menu { 
+        padding: 30px 6% 0 6%;
+        height: 50px;
+    }
+    .menu__title{
+        width: 30%;
+        font-size: 20px; 
+    }
+    .menu__navbar{
+        width: 70%;
+    }
+    .item__link{
+        font-size: 14px;
+    }
+    .item__search{
+        width: 20px;
+        height: 20px;
     }
 }
 @media (max-width: 500px) {
     .menu { 
-          height: 300px;
-      }
+        padding: 20px 5% 0 5%;
+    }
+    .menu__title{
+        width: 35%;
+        font-size: 18px; 
+    }
+    .menu__navbar{
+        width: 65%;
+    }
+    .menu__navbar ul{
+       padding: 0;
+    }
+    .item__link{
+        font-size: 13px;
+    }
 }
 
 @media (max-width: 414px) {
-    .menu { 
-          height: 230px;
-      }
+    .menu__navbar ul{
+        justify-content: space-between;
+    }
+    .item__link{
+        margin-right: 5px;
+    }
 }

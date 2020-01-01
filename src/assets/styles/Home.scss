@@ -1,22 +1,19 @@
-@import url('https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap');
+@import "./variables.scss";
 
 .container {
     margin: 0;
     padding: 0; 
     width: 100%;
-    font-family: 'Lato', sans-serif;
+    font-family: $Lato
 }
 @media (max-width: 1200px){
-    .header{
-        height: 700px;
-    }
+    
+    
 }
 
 /* tabletas */
 @media (max-width: 1025px) {
-  .header { 
-        height: 610px;
-    }
+  
 }
 
 /* escritorio normales */
