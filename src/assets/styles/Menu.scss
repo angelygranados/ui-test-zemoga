@@ -52,15 +52,11 @@
         padding: 15px 9%;
     }
 }
-
-/* tabletas */
 @media (max-width: 1025px) {
   .menu { 
         padding: 10px 9%;
     }
 }
-
-/* escritorio normales */
 @media (max-width: 769px) {
     .menu { 
         padding: 10px 7%;
@@ -80,8 +76,6 @@
         height: 25px;
     }
 }
-
-/* pantallas grandes */
 @media (max-width: 576px) {
     .menu { 
         padding: 30px 6% 0 6%;
@@ -120,7 +114,6 @@
         font-size: 13px;
     }
 }
-
 @media (max-width: 414px) {
     .menu__navbar ul{
         justify-content: space-between;

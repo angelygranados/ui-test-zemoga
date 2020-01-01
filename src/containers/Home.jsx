@@ -1,11 +1,19 @@
-import React from 'react';
-import '../assets/styles/Home.scss'
-import Header from '../components/Header'
+import React, {useEffect,useState} from 'react';
+import '../assets/styles/Home.scss';
+import Header from '../components/Header';
+import CTA from '../components/CTA';
+import Votes from '../components/Votes';
+import Item from '../components/Item';
 
-const Home = () => (
+const Home = () => {
+    return(
     <div className="container">
         <Header/>
-    </div>  
-);
+        <CTA/>
+        <Votes>
+        </Votes>   
+    </div>
+    )  
+};
 
 export default Home

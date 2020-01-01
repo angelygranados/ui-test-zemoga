@@ -1,0 +1,41 @@
+.item{
+    width: 50%;
+    height: 550px;
+}
+.item__details{
+    position: absolute;
+    top: 300px;
+    height: 250px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    grid-template-rows: 40px 30px 1fr 45px 35px 50px;
+    grid-template-areas: 'icon name'
+                         '. category'
+                         '. description'
+                         '. buttons'
+                         '. .'
+                         'progressbar progressbar';
+}
+.item__details--icon{
+    width: 40px;
+    height: 40px;
+    grid-area: 'icon';
+}
+.item__details--name{
+    grid-area: 'name';
+}
+.item__details--categoty{
+    grid-area: 'category';
+}
+.item__details--description{
+    grid-area: 'description'
+}
+.item_details--buttons{
+    grid-area: 'buttons';
+    display: flex;
+    flex-direction: row;
+}
+.item__details--progressBar{
+    grid-area: 'progressbar';
+}

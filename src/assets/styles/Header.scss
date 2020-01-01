@@ -7,22 +7,16 @@
         height: 700px;
     }
 }
-
-/* tabletas */
 @media (max-width: 1025px) {
   .header { 
         height: 610px;
     }
 }
-
-/* escritorio normales */
 @media (max-width: 769px) {
   .header { 
         height: 460px;
     }
 }
-
-/* pantallas grandes */
 @media (max-width: 576px) {
   .header { 
         height: 400px;
