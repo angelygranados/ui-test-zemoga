@@ -37,7 +37,8 @@
 }
 .item__details--name{
     grid-area: names;
-    font-size:45px;
+    font-size:40px;
+    vertical-align: text-bottom;
     color: $white;
     margin: 0;
 }
@@ -107,6 +108,9 @@
     align-items: center;
 }
 .progressBar_like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 100%;
     width: 40%;
     background-color: $yellow
@@ -116,7 +120,16 @@
     width: 40px;
     height: 40px;
 }
+.progressBar_like span, .progressBar_dislike span{
+    margin: auto;
+    color: $white;
+    font-size: 18px;
+
+}
 .progressBar_dislike{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
     height: 100%;
     width: 60%;
     background-color: $aquamarine;

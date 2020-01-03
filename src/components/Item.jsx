@@ -4,7 +4,10 @@ import likeIcon from '../assets/static/like-icon.png';
 import dislikeIcon from '../assets/static/dislike-icon.png';
 
 const Item = (props) => {
-    const {id, name, image, category, description, changed, handleVote, countLike, countDislike} = props;
+    
+    
+    const {id, name, image, category, description, changed, handleCount, likes, dislikes} = props;
+    const totalLikes = likes + dislikes
     return(
         <div className="item" id={id} style={{backgroundImage: `url(${image})`,  backgroundSize: 'cover'}}>
             <div className="item__details">
@@ -29,11 +32,11 @@ const Item = (props) => {
                             <img src={dislikeIcon} alt="Dislike"/>
                         </label>
                     </div>
-                    <div class="voteButton" id="voteButton" onClick={handleVote}><span>Vote Now</span></div>
+                    <div className="voteButton" id="voteButton"><span>Vote Now</span></div>
                 </div>
                 <div className="item__details--progressBar">
-                        <div className="progressBar_like"><img src={likeIcon}/><span>{countLike}</span></div>
-                        <div className="progressBar_dislike"><img src={dislikeIcon}/><span></span>{countDislike}</div>
+                        <div className="progressBar_like"><img src={likeIcon}/><span>{parseInt(likes * 100 / totalLikes)} %</span></div>
+                        <div className="progressBar_dislike"><span>{parseInt(dislikes * 100 / totalLikes)} %</span><img src={dislikeIcon}/></div>
                 </div>
             </div>
         </div>
