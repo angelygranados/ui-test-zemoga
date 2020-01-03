@@ -8,6 +8,13 @@
     color: $black;
     margin: 1%;
 }
+.votes__items{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 4%;
+    align-content: space-between;
+    justify-content: space-between;
+}
 @media (max-width: 1200px){
     .votes{
         height:90px;
@@ -28,6 +35,10 @@
     .votes { 
         padding: 30px 6% 0 6%;
         height: 50px;
+    }
+    .votes__items{
+        display: grid;
+        grid-template-columns: 1fr;
     }
 }
 @media (max-width: 500px) {

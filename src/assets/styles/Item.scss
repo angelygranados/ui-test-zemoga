@@ -1,41 +1,144 @@
+@import "./variables.scss";
+@mixin gradient($from, $to) {
+    background: -moz-linear-gradient(top, $from 0%, $to 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,$from), color-stop(100%,$to));
+    background: -webkit-linear-gradient(top, $from 0%,$to 100%);
+    background: -o-linear-gradient(top, $from 0%,$to 100%);
+  }
 .item{
-    width: 50%;
+    width: 100%;
     height: 550px;
+    margin: 0;
+    box-sizing: border-box;
 }
 .item__details{
-    position: absolute;
-    top: 300px;
-    height: 250px;
+    
+    @include gradient($transparent, $black);
+    margin-top: 290px;
+    height: 230px;
     width: 100%;
     display: grid;
-    grid-template-columns: 50px 1fr;
-    grid-template-rows: 40px 30px 1fr 45px 35px 50px;
-    grid-template-areas: 'icon name'
+    grid-template-columns: 60px 1fr;
+    grid-template-rows: 70px 30px 70px 45px 1fr;
+    grid-template-areas: 'icons names'
                          '. category'
                          '. description'
                          '. buttons'
-                         '. .'
                          'progressbar progressbar';
 }
 .item__details--icon{
-    width: 40px;
-    height: 40px;
-    grid-area: 'icon';
+    width: 30px;
+    height: 30px;
+    margin: 10px 0;
+    padding: 5px;
+    box-sizing: border-box;
+    background-color: $aquamarine;
+    grid-area: icons;
 }
 .item__details--name{
-    grid-area: 'name';
+    grid-area: names;
+    font-size:40px;
+    vertical-align: text-bottom;
+    color: $white;
+    margin: 0;
 }
 .item__details--categoty{
-    grid-area: 'category';
+    grid-area: category;
+    color: $white;
+    font-size: 14px;
+    margin-top: 10px
 }
 .item__details--description{
-    grid-area: 'description'
+    grid-area: description;
+    color: $white;
+    font-size: 18px;
+    margin-right: 20px;
 }
 .item_details--buttons{
-    grid-area: 'buttons';
+    grid-area: buttons;
     display: flex;
     flex-direction: row;
 }
+.RadioButton input {
+    -webkit-appearance: button;
+}
+.RadioButton label img{
+    widows: 25px;
+    height: 25px;
+    list-style: none;
+    margin: auto
+}
+.RadioButton.like{
+    cursor: pointer;
+    margin-right: 15px;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $aquamarine;
+}
+.RadioButton.dis{
+    cursor: pointer;
+    background-color: $yellow;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 15px;
+}
+.voteButton{
+    cursor: pointer;
+    border: 2px solid $white;
+    height: 40px;
+    padding: 5px;
+    box-sizing: border-box;
+}
+.voteButton span{
+    color: $white;
+    vertical-align: middle;
+}
 .item__details--progressBar{
-    grid-area: 'progressbar';
+    box-sizing: border-box;
+    height: 50px;
+    grid-area: progressbar;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.progressBar_like{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 40%;
+    background-color: $yellow
+}
+.progressBar_like img{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
+}
+.progressBar_like span, .progressBar_dislike span{
+    margin: auto;
+    color: $white;
+    font-size: 18px;
+
+}
+.progressBar_dislike{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    height: 100%;
+    width: 60%;
+    background-color: $aquamarine;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.progressBar_dislike img{
+    margin: 5px;
+    width: 40px;
+    height: 40px;
 }
