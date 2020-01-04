@@ -1,0 +1,35 @@
+@import "./variables.scss";
+
+.pageNotFound{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 0 30px;
+    min-height: 100vh;
+    width: 100%;
+    background: linear-gradient($aquamarine, $white);
+}
+.pageNotFound-title{
+    animation: growth 2.5s infinite ease;
+    transform-origin: center;
+    margin: 0;
+    height: 80px;
+    font-size: 60px;
+}
+.pageNotFound-text{
+    font-size: 18px;
+    color: $yellow;
+}
+@keyframes growth {
+    0%{
+      scale: 1;
+    }
+    50%{
+        transform: scale(1.3);
+    }
+    100%{
+      scale: 1;
+    }
+  }
